@@ -24,7 +24,7 @@ header {
 header.scroll {
     -webkit-box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.75);
-    box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.25);
+    box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.75);
 }
 
 .informate-shtese {
@@ -203,19 +203,18 @@ main {
 
 #section2 {
     height: 60vh;
+    background: var(--ubt-blue);
     display: flex;
-    background:white;
-    justify-content: space-evenly;
     align-items: center;
     align-self: center;
     flex-direction: row;
- 
+    padding:200px 0;
     
 }
 
 .majtas {
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
     background: url("/img/ubt-studentat.jpg");
     background-size: cover;
     background-position: center;
@@ -224,6 +223,7 @@ main {
 }
 
 .teksti {
+padding:10px;
 display: flex;
 flex-direction: column;
 }
@@ -236,16 +236,16 @@ flex-direction: column;
 .konkurs{
     display: flex;
     background: white;
+    padding: 20px;
     border-radius: 10px;
-    margin:0px 5%;
-    border-bottom:5px solid var(--ubt-blue);
-    -webkit-box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
-    -moz-box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
-    box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
-    cursor: pointer;
+    margin:0px 50px
 }
 
-
+.align {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 5%;
+}
 
 #section2 button {
     padding:10px 70px;
@@ -356,26 +356,14 @@ footer .mediat-sociale {
     -moz-box-shadow: 10px 10px 195px 94px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 195px 94px rgba(0, 0, 0, 0.75);
 }
-
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
 
 @media (max-width: 992px) {
-    #section2 {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding:0px;
-        margin:0px;
-        height: auto;
-    }
-
-    .konkurs {
-        padding:0px;
-        margin:0px;
-        max-width:150px, auto;
-        height: auto;
-        margin:15px;
-        transform: scale(0.9);
-    }
-
 
     #section1 h2 {
 
