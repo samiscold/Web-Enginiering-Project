@@ -156,7 +156,7 @@ main {
 /*paralax*/
 
 #section1 {
-    background-image: url('img/ubt-campus.jpg');
+    background-image: url('./img/ubt-campus.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
