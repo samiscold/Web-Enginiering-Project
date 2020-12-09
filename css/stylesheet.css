@@ -9,6 +9,8 @@
     font-family: sans-serif;
 }
 
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,14 +19,14 @@ header {
     width: 100%;
     position: fixed;
     transition: 0.5s ease-out;
-    background: white;
-    z-index: 1;
+    background: var(--ubt-blue);
+    z-index: 2;
 }
 
 header.scroll {
-    -webkit-box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.75);
-    box-shadow: 0px 20px 45px -23px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 20px 45px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 20px 45px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 20px 45px -23px rgba(0, 0, 0, 0.25);
 }
 
 .informate-shtese {
@@ -33,19 +35,24 @@ header.scroll {
     padding: 10px 5%;
     font-size: 13px;
     background: var(--ubt-dark-blue);
+    border-bottom: 2px solid #041529;
 }
 
+/* 
 nav.decrease {
     transform: scale(1);
-}
+} */
+
 
 nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin: 0px 5%;
     transition: 0.2s ease-in;
-    transform: scale(1.02);
+    z-index: 999;
+    background: var(--ubt-blue);
+    border-top: 1px solid rgb(55, 82, 111);
+    padding: 5px 5%;
 }
 
 nav .icon {
@@ -53,8 +60,10 @@ nav .icon {
 }
 
 .informate-shtese a {
-    color: #ffff
+    color: rgb(208, 208, 208);
 }
+
+
 
 .nav-majtas {
     display: flex;
@@ -76,7 +85,7 @@ nav .icon {
 
 ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 9px 11px 11px;
 }
 
@@ -156,15 +165,15 @@ main {
 /*paralax*/
 
 #section1 {
-    background-image: url('img/ubt-campus.jpg');
+    background-image: url('/img/ubt-campus.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     position: fixed;
     z-index: -1;
-    top:118.8px;
+    top: 118.8px;
 }
 
 
@@ -177,8 +186,8 @@ main {
     letter-spacing: 0.16em;
     font-size: 2rem;
     text-transform: uppercase;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
 
 }
@@ -196,70 +205,85 @@ main {
 
 .qite-te-posht {
     position: relative;
-    top: 56vh;
+    top: 67vh;
     left: 0px;
-    
 }
 
-#section2 {
-    height: 60vh;
+
+.majtas {
+    width: 400px;
+    height: 180px;
+    background: url("/img/ubt-studentat.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.teksti {
     display: flex;
-    background:white;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.button-icon {
+    padding: 0px 5px;
+}
+
+
+
+#section2 {
+    height: 50vh;
+    display: flex;
+    background: white;
+    background-position: center;
     justify-content: space-evenly;
     align-items: center;
     align-self: center;
     flex-direction: row;
- 
-    
+
 }
 
-.majtas {
-    width:150px;
-    height:150px;
-    background: url("/img/ubt-studentat.jpg");
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
-    border-radius: 15px;
+.students {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.05;
+    position: absolute;
+    display: inline-block;
+    top: 22%;
 }
 
-.teksti {
-display: flex;
-flex-direction: column;
-}
-
-.button-icon {
-    padding:0px 5px;
-    
-}
-
-.konkurs{
+.konkurs {
+    width: 100%;
     display: flex;
     background: white;
+    z-index: 1;
     border-radius: 10px;
-    margin:0px 5%;
-    border-bottom:5px solid var(--ubt-blue);
-    -webkit-box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
-    -moz-box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
-    box-shadow: 2px 10px 5px -11px rgba(112,112,112,1);
     cursor: pointer;
+    margin: 0 5%;
+    padding: 20px 0;
+    border-bottom: 5px solid var(--ubt-blue);
+
 }
 
 
 
 #section2 button {
-    padding:10px 70px;
-    color: var(--ubt-blue);
-    font-weight:700;
-    margin-top:15px;
+    padding: 10px 70px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 15px;
+    background: var(--ubt-blue);
+    border: none;
 }
 
 .author-info {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
 
-.konkurs-date  {
+.konkurs-date {
     font-weight: lighter;
     font-size: .8rem;
     padding: 5px;
@@ -267,23 +291,36 @@ flex-direction: column;
 
 
 .ndamje {
-    width:100%;
+    width: 100%;
     background: var(--ubt-blue);
-    height: 1px;
-    margin-top:15px;
+    height: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .post-title {
     font-weight: bolder;
-    color:var(--ubt-blue);
+    color: var(--ubt-blue);
     font-size: 1.5rem;
 }
+
 #section3 {
-    position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: var(--ubt-blue);
 }
+
+.lajmi {
+    width: 350px;
+    background: white;
+    margin: 0 5%;
+    padding: 30px;
+}
+
+.lajmi img {
+    width: 250px;
+}
+
 
 
 .question-mark {
@@ -312,16 +349,17 @@ flex-direction: column;
 
 
 footer {
-    position: relative;
+    position: absolute;
     width: 100%;
     padding: 80px 0px;
     background: white;
     margin-top: 400px;
+    display: flex;
 }
 
 footer div {
     display: flex;
-    justify-content: space-evenly;
+    margin: 0 5%;
 }
 
 footer div {
@@ -357,33 +395,56 @@ footer .mediat-sociale {
     box-shadow: 10px 10px 195px 94px rgba(0, 0, 0, 0.75);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.lajmet {
+    display: flex;
+    margin: 20px 0;
+}
+
+.cards {
+    width: 50px;
+    background: white;
+
+}
+
+.cards img {
+    width: 10px;
+    height: 200px;
+
+
+}
 
 @media (max-width: 992px) {
     #section2 {
         flex-direction: column;
         justify-content: flex-start;
-        padding:0px;
-        margin:0px;
+        padding: 0px;
+        margin: 0px;
         height: auto;
     }
 
     .konkurs {
-        padding:0px;
-        margin:0px;
-        max-width:150px, auto;
+        padding: 0px;
+        margin: 0px;
+        max-width: 150px, auto;
         height: auto;
-        margin:15px;
+        margin: 15px;
         transform: scale(0.9);
     }
 
 
     #section1 h2 {
 
-        font-size:1.6rem;
+        font-size: 1.6rem;
         padding: 0px;
-        margin:0px;
-        
-        }
+        margin: 0px;
+
+    }
+
     .loopa-dropdown {
         min-width: auto;
     }
@@ -419,11 +480,12 @@ footer .mediat-sociale {
 
     #section1 h2 {
 
-    font-size:1.2rem;
-    padding: 0px;
-    margin:0px;
-    
+        font-size: 1.2rem;
+        padding: 0px;
+        margin: 0px;
+
     }
+
     .nav-majtas ul {
         display: none;
     }
@@ -463,63 +525,71 @@ footer .mediat-sociale {
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
-position: absolute;
-width:30%;
-height: 30%;
-top:30%;
-left:35%;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 30%;
+    left: 35%;
 
 }
-.form {
-  position:relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 360px;
 
-  padding: 100px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+
+    padding: 100px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
+
 .form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: var(--ubt-blue);
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: var(--ubt-blue);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
-  background: var(--ubt-blue);
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+    background: var(--ubt-blue);
 }
+
 .form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
 }
+
 .form .message a {
-  color: var(--ubt-dark-blue);
-  text-decoration: none;
+    color: var(--ubt-dark-blue);
+    text-decoration: none;
 }
+
 .form .register-form {
-  display: none;
+    display: none;
 }
 
 .log-section {
@@ -527,5 +597,5 @@ left:35%;
     width: 100%;
     height: 100vh;
     padding: 0px;
-    margin:0px;
+    margin: 0px;
 }
