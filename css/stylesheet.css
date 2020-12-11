@@ -2,6 +2,8 @@
     --ubt-blue: #112d4e;
 }
 
+
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -17,7 +19,7 @@ header {
     height: 130px;
     transition: 0.5s ease-out;
     background: var(--ubt-blue);
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top:0;
 
@@ -59,7 +61,12 @@ nav {
     background-size: cover;
     margin-top:130px;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
+    position: absolute;
+    top:0;
+    z-index: 1;
+    
+
 }
 
 .section1 h1 {
@@ -74,16 +81,23 @@ nav {
     text-align: center;
 }
 
+
+.section2 {
+    width: 100%;
+    height: 100vh;
+    background: lightblue;
+}
+
+
 .background-color {
     width:100%;
-    height: 100%;
+    height: 40vh;
     background: rgba(18, 61, 141, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top:0;
-
+    flex-direction: column;
+    
 }
 
 
@@ -212,7 +226,6 @@ img {
     background-size: cover;
     width: 100%;
     height: 50vh;
-    position: fixed;
     z-index: -1;
     top: 118.8px;
 }
@@ -409,16 +422,23 @@ img {
 
 
 }
+.section2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;  
+    padding-bottom: 300px;
+}
+
 
 
 footer {
     width: 100%;   
-    height: auto;
-    position: absolute;
+    height: 300px;
+    position: relative;
     bottom: 0;
-    left:0;
     background:#403f3f;
-    margin-bottom: -170px;
+
 }
 
 footer li { 
@@ -510,13 +530,9 @@ footer ul {
     padding: 0px;
 }
 
-main {
-    position: absolute;
-    width: 100vw;
-    margin-top:130px;
-    padding: 0 5%;;
 
-}
+
+
 
 footer .ndamje {
     width: 1px;
@@ -536,7 +552,19 @@ footer .section-right {
 
 @media (max-width: 992px) {
  
-    
+    .section1 {
+        background-image: url('/img/ubt-campus.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top:130px;
+        width: 100%;
+        height: 25vh;
+    }
+
+    .section1 h1 {
+        font-size: 1rem;
+    }
 
     .konkurs {
         padding: 0px;
@@ -589,6 +617,19 @@ footer .section-right {
 
 @media (max-width:600px) {
 
+    .section1 {
+        background-image: url('/img/ubt-campus.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top:130px;
+        width: 100%;
+        height: 25vh;
+    }
+
+    .section1 h1 {
+        font-size: 1rem;
+    }
    
 footer .top  {
     width: 100%;

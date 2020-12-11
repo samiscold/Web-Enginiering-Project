@@ -1,7 +1,7 @@
 
 function scrollBanner() {
   var scrollPos;
-  var headerText = document.querySelector('#section1 h2');
+  var headerText = document.querySelector('section1 h1');
   scrollPos = window.scrollY;
 
   if (scrollPos <= 800) {
@@ -16,7 +16,7 @@ window.addEventListener('scroll', scrollBanner);
 
 function scrollBanner() {
   var scrollPos;
-  var headerText = document.querySelector('#section1');
+  var headerText = document.querySelector('.section1');
   scrollPos = window.scrollY;
 
   if (scrollPos <= 800) {
