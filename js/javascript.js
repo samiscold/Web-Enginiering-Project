@@ -9,7 +9,10 @@ function scrollBanner() {
     headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
   }
 }
+
+
 window.addEventListener('scroll', scrollBanner);
+
 
 function scrollBanner() {
   var scrollPos;
@@ -27,13 +30,7 @@ window.addEventListener('scroll', scrollBanner);
 
 
 
-window.onscroll = () => {
-    const nav = document.querySelector('#headerbar');
-    const navbar = document.querySelector('#navbar')
-    if(this.scrollY <= 25) nav.className = ''; else nav.className = 'scroll';
-    if(this.scrollY <= 25) navbar.className = ''; else navbar.className = 'decrease';
 
-  };
 
 
 
@@ -82,6 +79,6 @@ function myFunction() {
     }
   }
 
-
+ 
 
 
