@@ -1,34 +1,4 @@
 
-function scrollBanner() {
-  var scrollPos;
-  var headerText = document.querySelector('section1 h1');
-  scrollPos = window.scrollY;
-
-  if (scrollPos <= 800) {
-    headerText.style.opacity = 1 - (scrollPos / 600);
-    headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
-  }
-}
-
-
-window.addEventListener('scroll', scrollBanner);
-
-
-function scrollBanner() {
-  var scrollPos;
-  var headerText = document.querySelector('.section1');
-  scrollPos = window.scrollY;
-
-  if (scrollPos <= 800) {
-    headerText.style.opacity = 1 - (scrollPos / 600);
-    headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
-  }
-}
-window.addEventListener('scroll', scrollBanner);
-
-
-
-
 
 
 
