@@ -266,7 +266,7 @@ img {
 .majtas {
     width: 400px;
     height: 180px;
-    background: url("/img/ubt-studentat.jpg");
+    background: url("./img/ubt-studentat.jpg");
     background-size: cover;
     background-position: center;
     margin-right: 20px;
