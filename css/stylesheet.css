@@ -55,16 +55,68 @@ nav {
 }
 
 .section1 {
-    background-image: url('/img/ubt-campus.jpg');
-    background-position: center;
+    background-image: url('/img/ubt-studentat.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top:130px;
     width: 100%;
-    height: 30vh;
+    height: 70vh;
     z-index: 1;
-    
+}
 
+
+
+.section1-below {
+    width:100%;
+    height: 30vh;
+    background: var(--ubt-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1-below:before {
+    font-family: Tahoma;
+    content: '"';
+    color: white;
+    font-size: 150px;
+    padding: 25px;
+}
+
+.section1-below:after {
+    font-family: Tahoma;
+    content: '"';
+    color: white;
+    font-size: 150px;
+    padding: 25px;
+}
+
+
+ .section1-below h1 {
+    color: white;
+    font-weight: bolder;
+    font-size: 3em;
+    text-transform: uppercase;
+ }
+
+
+
+.butonet {
+    display: flex;
+}
+
+.butonet button {
+    border: none;
+    padding: 15px 30px;
+    background: var(--ubt-blue);
+    margin:15px 5px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.butonet button i {
+    padding: 0px 5px;
 }
 
 .section1 h1 {
@@ -72,11 +124,13 @@ nav {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
     letter-spacing: 0.16em;
-    font-size: 2rem;
+    font-size: 60px;
     text-transform: uppercase;
     padding: 0px;
     margin: 0px;
     text-align: center;
+    text-align: left;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
 
@@ -88,8 +142,9 @@ nav {
     background: rgba(18, 61, 141, 0.7);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    padding: 0 5%;
     
 }
 
@@ -104,6 +159,7 @@ nav .icon {
 }
 
 .nav-items li a{
+    font-size: 1.1em;
     transition: color.3s ease-in;
  }
 
@@ -264,12 +320,12 @@ img {
 
 
 .majtas {
-    width: 400px;
+    width: 100%;
     height: 180px;
     background: url("../img/ubt-studentat.jpg");
     background-size: cover;
     background-position: center;
-    margin-right: 20px;
+
 }
 
 .teksti {
@@ -308,18 +364,32 @@ img {
 
 
 .konkurs {
-    width: auto;
+    width: 31%;
+    height: auto;
     z-index: 1;
     border-radius: 10px;
     cursor: pointer;
+    padding:50px 0;
     display: flex;
-    align-items: flex-start;
-    
-    
-
-
-
+    flex-wrap: wrap;
 }
+
+.more-button {
+
+   border: none;
+   border-bottom: 1px solid transparent;
+   margin: 50px auto;
+   color: var(--ubt-blue);
+   background: transparent;
+   transition: border 0.3s linear;
+   padding:0;
+   font-size: 1em;
+}
+
+.more-button:hover {
+    border-color: black;
+}
+
 
 
 
@@ -427,33 +497,34 @@ img {
 .section2 {
     display: flex;
     align-items: center;
-    background: lightblue;
-    height: 50vh;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    background: url(/img/students.svg);
-    background-repeat: no-repeat;
-    background-size: 500px;
-    background-position-x: 90%;
-    background-position-y: 50%;
+
   
 
 }
 
+.post-title {
+    margin:20px 0px;
+}
+
 .section2 .apliko-button{
     padding:10px 20px;
+    background: var(--ubt-blue);
+    color: #fff;
+    border:none;
+    margin:25px 0;
 }
 
 
 .opacity {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-self: flex-start;
     align-items:center;
     background: rgba(255, 255, 255, 0.97);  
     width: 100%;
-    height: 100vh;
     padding: 0 5%;
 }
 
@@ -466,13 +537,67 @@ img {
     opacity: 0.1;
 }
 
+
+.section3 {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(17, 45, 78, .9);
+}
+
+.section3:after {
+        content: "";
+        background: url(/img/students.svg),var(--ubt-blue);
+        background-position: center;
+        background-size: 1000px;
+        background-repeat: repeat-x;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+}
+
+
+.section3 iframe {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    z-index: 99999;
+}
+
+/*rethi*/
+/* .section3:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top:0;
+    background: linear-gradient(to bottom, white,transparent);
+} */
+
+/* .section3:after {
+    content: '';
+    position: absolute;
+    width:100vh;
+    left:50vh;
+    height: 100vh;
+    top: -10vh;
+    border-radius: 100%;
+    background: white;
+} */
+
 footer {
     width: 100%;   
     height: 300px;
     position: relative;
     bottom: 0;
     background:#403f3f;
-
+    transition: background 3 ease;
 }
 
 footer li { 
@@ -500,6 +625,8 @@ footer img {
 
 .section-left a {
     text-align: right;
+    transition: background 3 ease;
+    
 }
 
 
@@ -513,11 +640,16 @@ footer ul li a{
     display:block;
     color:#b3b2b2;
     text-decoration: none;
-    
+    -moz-transition: background 0.3s linear; /* Firefox 4 */
+    -webkit-transition: all 0.3s linear; /* Safari and Chrome */
 }
+
+
 
 footer a:hover {
     text-decoration: underline;
+    padding: 0 .25rem;
+    color:white;
 }
 
 footer .bottom  a {
@@ -585,7 +717,43 @@ footer .section-right {
 
 
 @media (max-width: 992px) {
- 
+
+    .konkurs {
+        width:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .opacity {
+        display: flex;
+        justify-content: flex-start;
+        align-self: center;
+        align-items:center;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .majtas {
+        width:100%;
+        height: 180px;
+        background: url("/img/ubt-studentat.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-right:20px;
+    }
+
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
     .section1 {
         background-image: url('/img/ubt-campus.jpg');
         background-position: center;
@@ -593,11 +761,20 @@ footer .section-right {
         background-size: cover;
         margin-top:130px;
         width: 100%;
-        height: 25vh;
+        height:300px;
+        
+    }
+
+    .section1-below {
+        height: auto;
+    }
+    .section1-below h1 {
+        font-size: 1.5rem;
     }
 
     .section1 h1 {
-        font-size: 1rem;
+        font-size: 2rem;
+        
     }
 
 
@@ -642,8 +819,13 @@ footer .section-right {
 }
 
 @media (max-width:600px) {
-
+    
+    .section1-below {
+        display: none;
+    }
+    
     .konkurs {
+        margin:20px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -655,30 +837,28 @@ footer .section-right {
         height: auto;
     }
 
+    .opacity {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items:center;
+        height: auto;
+    }
+
     
-.opacity {
-    display: flex;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.97);  
-    width: 100%;
-    height: auto;
-    padding: 0 5%;
-}
 
 
     .majtas {
-        width: 300px;
+        width:100%;
         height: 180px;
         background: url("/img/ubt-studentat.jpg");
         background-size: cover;
         background-position: center;
-        margin:0px;
+        margin:10px;
+
     }
 
-    .section2 {
-        height: auto;
-        background: transparent;
-    }
+
 
     .section1 {
         background-image: url('/img/ubt-campus.jpg');
@@ -687,11 +867,25 @@ footer .section-right {
         background-size: cover;
         margin-top:130px;
         width: 100%;
-        height: 25vh;
+        height: 300px;
     }
 
-    .section1 h1 {
+    .background-color {
+        justify-content: center;
+        align-items:center;
+    }
+
+    .section1 button {
+        padding: 5px 50px;
         font-size: 1rem;
+    }
+ 
+    .section1 h1 {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
    
 footer .top  {
